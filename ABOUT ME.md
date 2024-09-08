@@ -1,0 +1,5 @@
+-hello i'm a CAT
+-i will create script for roblox
+-umh... my real "Minvokin Petrikov"
+-i will make script free not key or have (if you want)
+-what do you want script game ? let me know !
