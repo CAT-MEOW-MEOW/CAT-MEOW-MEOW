@@ -1,0 +1,24 @@
+local Players = game:GetService("Players")
+
+
+Players.PlayerAdded:Connect(function(player)
+
+    player.CharacterAdded:Connect(function(character)
+        local humanoid = character:WaitForChild("Humanoid")
+
+ 
+        
+        humanoid.HealthChanged:Connect(function(health)
+            if health < humanoid.MaxHealth then
+                humanoid.Health = humanoid.MaxHealth
+            end
+        end)
+
+
+        humanoid.Died:Connect(function()
+            humanoid.Health = humanoid.MaxHealth
+
+            character:MoveTo(player.RespawnLocation.Position)
+        end)
+    end)
+end)
